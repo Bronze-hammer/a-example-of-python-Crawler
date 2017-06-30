@@ -7,6 +7,7 @@ from baike_spider import url_manager
 
 
 class SpiderMain(object):
+    #构造函数初始化各个对象
     def __init__(self):
         self.urls = url_manager.UrlManager()
         self.downloader = html_downloader.HtmlDownloader()
@@ -36,6 +37,6 @@ class SpiderMain(object):
         self.outputer.output_html()
 
 if __name__=="__main__":
-    root_url = "http://baike.baidu.com/view/21087.htm"
+    root_url = "http://baike.baidu.com/view/21087.htm"    #入口url
     obj_spider = SpiderMain()
-    obj_spider.craw(root_url)
+    obj_spider.craw(root_url)    #启动爬虫
