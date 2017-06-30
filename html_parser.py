@@ -4,6 +4,19 @@ import urlparse
 from bs4 import BeautifulSoup
 import re
 
+```
+BeautifulSoup解析器
+
+from bs4 import BeautifulSoup
+
+#根据HTML网页字符串创建BeautifulSoup对象
+soup = BeautifulSoup(
+                    html_doc    #HTML文档字符串
+                    'html_parser'    #HTML解析器
+                    from_encoding='utf-8'    #HTML文档的编码
+                    )
+
+```
 
 class HtmlParser(object):
 
@@ -11,6 +24,7 @@ class HtmlParser(object):
 
         new_urls = set()
 
+        #搜索节点
         links = soup.find_all('a', href=re.compile(r"/view/\d+\.htm"))
         for link in links:
             new_url = link['href']
