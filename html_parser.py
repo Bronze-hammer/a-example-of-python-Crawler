@@ -4,7 +4,7 @@ import urlparse
 from bs4 import BeautifulSoup
 import re
 
-```
+'''
 BeautifulSoup解析器
 
 from bs4 import BeautifulSoup
@@ -16,7 +16,7 @@ soup = BeautifulSoup(
                     from_encoding='utf-8'    #HTML文档的编码
                     )
 
-```
+'''
 
 class HtmlParser(object):
 
