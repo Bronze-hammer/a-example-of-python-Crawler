@@ -34,13 +34,14 @@ class HtmlParser(object):
         return new_urls
 
     def _get_new_data(self, page_url, soup):
-        res_data = {}
-
+        res_data = {}  # 字典
+        
+        #该页面URL
         res_data['url'] = page_url
-
+        # 页面标题
         title_node = soup.find('dd', class_="lemmaWgt-lemmaTitle-title").find("h1")
         res_data['title'] = title_node.get_text()
-
+        # 页面主要内容
         summary_node = soup.find('div', class_="lemma-summary")
         res_data['summary'] = summary_node.get_text()
 
