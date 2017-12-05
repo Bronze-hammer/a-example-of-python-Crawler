@@ -3,8 +3,9 @@
 class UrlManager(object):
 
     def __init__(self):
-        self.new_urls = set()
-        self.old_urls = set()
+        # 两个URL列表
+        self.new_urls = set()  # 待爬取的URL列表
+        self.old_urls = set()  # 已经爬取过的URL列表
 
     def add_new_url(self, url):
         if url is None:
