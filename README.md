@@ -276,9 +276,13 @@ print p_node.name, p_node.get_text()
 URL格式：词条页面URL:/view/125370.htm
 
 数据格式：
+
     ```html
+    
     标题：<dd class="lemmaWgt-lemmaTitle-title"><h1>****</h1></dd>
+    
     简介：<div class="lemma-summary">****</div>
+    
     ```
     
 页面编码：UTF-8
