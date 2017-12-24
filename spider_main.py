@@ -9,10 +9,10 @@ from baike_spider import url_manager
 class SpiderMain(object):
     #构造函数初始化各个对象
     def __init__(self):
-        self.urls = url_manager.UrlManager()
-        self.downloader = html_downloader.HtmlDownloader()
-        self.parser = html_parser.HtmlParser()
-        self.outputer = html_outputer.HtmlOutputer()
+        self.urls = url_manager.UrlManager() # URL管理器
+        self.downloader = html_downloader.HtmlDownloader() #网页下载器
+        self.parser = html_parser.HtmlParser() # 网页解析器
+        self.outputer = html_outputer.HtmlOutputer() #内容输出
 
     def craw(self, root_url):
         count = 1
